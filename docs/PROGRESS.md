@@ -2,7 +2,7 @@
 
 Overnight summary: (the agent writes it here at the end of the run)
 
-- [ ] 01 Repository, tooling and the database folder
+- [x] 01 Repository, tooling and the database folder (2026-11-04, 8 unit + 1 e2e passing; migrate SQL apply path is offline-only overnight)
 - [ ] 02 Shared contract, helpers and the fake repository
 - [ ] 03 API core, sign-in and the SQL repository
 - [ ] 04 API read endpoints for the SIC

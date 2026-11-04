@@ -30,6 +30,15 @@
 | --- | --- |
 | 0019_loader_site_config | Written and anchor-checked against live; apply on test first (see its README) |
 
+## Batch splitting (`db/scripts/migrate.ts`)
+
+`migrate.ts` splits each `.sql` file into batches before apply. A new batch starts on:
+
+- a line beginning `CREATE OR ALTER` or `CREATE SECURITY POLICY`;
+- a lettered section comment `-- NNx.` when that section is a grant / role / misc block (not immediately followed by `CREATE OR ALTER` / `CREATE SECURITY POLICY`).
+
+A `-- NNx.` comment that introduces a procedure stays in the same batch as the following `CREATE OR ALTER`, so `0014_procedures.sql` yields one batch per procedure. Run `pnpm --filter db exec tsx scripts/migrate.ts --offline --dry-run` to plan from this README without a database.
+
 ## Adding a migration
 
 1. Next free number (0021 onwards; 0019 is taken), descriptive name: `0021_<what>.sql`.
