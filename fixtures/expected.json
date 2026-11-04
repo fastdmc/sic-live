@@ -1,0 +1,32 @@
+{
+ "HFI_2026-11-02": {
+  "rows": 216,
+  "lines": 16,
+  "actualPacks": 135048,
+  "targetPacks": 175904,
+  "planPacks": 137640,
+  "redHours": 88,
+  "giveawayKg": 1791.79,
+  "rejectedPacks": 7118
+ },
+ "DEMO_2026-11-02": {
+  "rows": 28,
+  "actualPacks": 15053
+ },
+ "escalationEngine_2026-11-02_12:00_live_db": {
+  "RedNoComment_L1": 38,
+  "RedNoComment_L2": 38,
+  "ConsecutiveRed_L1": 9,
+  "ConsecutiveRed_L2": 4,
+  "ShiftBelowTarget_L1": 8,
+  "note": "Measured on the live database with frozen targets."
+ },
+ "escalationEngine_2026-11-02_12:00_fake_reference": {
+  "RedNoComment_L1": 39,
+  "RedNoComment_L2": 39,
+  "ConsecutiveRed_L1": 10,
+  "ConsecutiveRed_L2": 4,
+  "ShiftBelowTarget_L1": 8,
+  "note": "A reviewer simulation of the rules on these fixtures (view targets). The fake should land on or very near these; record what yours gives in docs/PROGRESS.md."
+ }
+}

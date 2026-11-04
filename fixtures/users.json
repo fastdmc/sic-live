@@ -1,0 +1,90 @@
+{
+ "note": "Test people for the fake data mode. Real people come from Entra sign-in and app.UserSiteRole.",
+ "users": [
+  {
+   "userId": 1,
+   "email": "line.leader@hfi.example",
+   "displayName": "Lena Leader",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "HFI",
+     "areaKey": "fresh",
+     "role": "LineLeader"
+    }
+   ]
+  },
+  {
+   "userId": 2,
+   "email": "area.manager@hfi.example",
+   "displayName": "Aidan Manager",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "HFI",
+     "areaKey": "fresh",
+     "role": "AreaManager"
+    }
+   ]
+  },
+  {
+   "userId": 3,
+   "email": "site.manager@hfi.example",
+   "displayName": "Siobhan Site",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "HFI",
+     "areaKey": "",
+     "role": "SiteManager"
+    }
+   ]
+  },
+  {
+   "userId": 4,
+   "email": "site.admin@hfi.example",
+   "displayName": "Sam Admin",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "HFI",
+     "areaKey": "",
+     "role": "SiteAdmin"
+    }
+   ]
+  },
+  {
+   "userId": 5,
+   "email": "uk.viewer@hfuk.example",
+   "displayName": "Uma Viewer",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "HFUK",
+     "areaKey": "",
+     "role": "Viewer"
+    }
+   ]
+  },
+  {
+   "userId": 6,
+   "email": "group.admin@dmc.example",
+   "displayName": "Greta Group",
+   "isGroupAdmin": true,
+   "roles": []
+  },
+  {
+   "userId": 7,
+   "email": "demo.leader@demo.example",
+   "displayName": "Dev Demo",
+   "isGroupAdmin": false,
+   "roles": [
+    {
+     "siteKey": "DEMO",
+     "areaKey": "",
+     "role": "LineLeader"
+    }
+   ]
+  }
+ ]
+}

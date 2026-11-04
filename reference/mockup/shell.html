@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIC Live · HFI Drogheda</title>
+<meta name="description" content="Short interval control for HFI Drogheda: site, area, line, floor screen and SIC sheet views from curated.vSIC_Hourly.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23002060'/%3E%3Crect x='5' y='12' width='3.5' height='7' rx='1' fill='%23418FDE'/%3E%3Crect x='10.25' y='8' width='3.5' height='11' rx='1' fill='%23fff'/%3E%3Crect x='15.5' y='5' width='3.5' height='14' rx='1' fill='%232FC174'/%3E%3C/svg%3E">
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<div class="shell" id="shell">
+  <aside class="side" id="side" aria-label="Navigation">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="12" width="4.2" height="9" rx="1.2" fill="#418FDE"/><rect x="9.9" y="7" width="4.2" height="14" rx="1.2" fill="#FFFFFF"/><rect x="16.8" y="3" width="4.2" height="18" rx="1.2" fill="#2FC174"/></svg></span>
+      <span class="bt"><b>SIC Live</b><small id="brandSub"></small></span>
+      <button class="iconbtn collapse" type="button" data-act="collapse" aria-label="Collapse the sidebar" title="Collapse the sidebar"></button>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">
+      <div class="status" id="status"></div>
+      <div class="foot-btns">
+        <button class="btn sm" type="button" data-act="kiosk" title="Show on TV (K)"><span data-ic="tv"></span><span class="t">TV mode</span></button>
+        <button class="btn sm" type="button" data-act="help" title="How it works and shortcuts (?)"><span data-ic="info"></span><span class="t">Help</span></button>
+      </div>
+    </div>
+  </aside>
+
+  <header class="top">
+    <button class="iconbtn menu" type="button" data-act="menu" aria-label="Open the menu"><span data-ic="menu"></span></button>
+    <div class="crumbs" id="crumbs"></div>
+    <div class="spacer"></div>
+    <div class="scrub" role="group" aria-label="Hour">
+      <button class="iconbtn" type="button" id="hprev" data-act="hprev" aria-label="Previous hour" title="Previous hour (←)"><span data-ic="chevL"></span></button>
+      <div class="scrub-mid">
+        <div class="scrub-lbl"><b class="num" id="hlbl"></b><span id="hsub"></span></div>
+        <input type="range" id="hrange" min="6" max="23" step="1" aria-label="Hour of the day">
+      </div>
+      <button class="iconbtn" type="button" id="hnext" data-act="hnext" aria-label="Next hour" title="Next hour (→)"><span data-ic="chevR"></span></button>
+      <button class="iconbtn" type="button" id="replay" data-act="replay" aria-pressed="false" aria-label="Replay the day" title="Replay the day (Space)"><span data-ic="play"></span></button>
+      <button class="btn sm endbtn" type="button" data-act="hend" title="Jump to the end of the day (End)">End of day</button>
+    </div>
+    <div class="datechip" id="datechip"></div>
+    <button class="searchbtn" type="button" data-act="palette" aria-label="Find a line or screen" title="Find a line or screen (/)"><span data-ic="search"></span><span class="t">Find</span><span class="kbd">/</span></button>
+    <button class="iconbtn" type="button" id="themebtn" data-act="theme" aria-label="Theme" title="Theme (T)"></button>
+    <button class="iconbtn" type="button" data-act="kiosk" aria-label="Show on TV" title="Show on TV (K)"><span data-ic="tv"></span></button>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<div class="kbar" id="kbar" hidden>
+  <span class="kl" id="kbl"></span>
+  <button class="iconbtn" type="button" data-act="hprev" aria-label="Previous hour"><span data-ic="chevL"></span></button>
+  <button class="iconbtn" type="button" data-act="hnext" aria-label="Next hour"><span data-ic="chevR"></span></button>
+  <button class="iconbtn" type="button" id="krot" data-act="rotate" aria-pressed="false" aria-label="Rotate screens every 15 seconds" title="Rotate screens (R)"><span data-ic="rotate"></span></button>
+  <button class="btn sm" type="button" data-act="kiosk">Exit TV mode</button>
+</div>
+
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<dialog id="palette" aria-label="Find a line or screen">
+  <div class="pal-in"><span data-ic="search"></span><input id="palq" type="text" placeholder="Find a line, area or screen…" autocomplete="off" spellcheck="false" aria-label="Search"><span class="kbd">Esc</span></div>
+  <div class="pal-list" id="pallist" role="listbox"></div>
+</dialog>
+
+<dialog id="help" aria-labelledby="helpTitle">
+  <div class="dlg-h"><h2 id="helpTitle">How SIC Live works</h2><button class="iconbtn" type="button" data-act="closehelp" aria-label="Close"><span data-ic="x"></span></button></div>
+  <div class="dlg-b" id="helpBody"></div>
+</dialog>
+
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>

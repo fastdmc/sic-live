@@ -1,0 +1,14 @@
+---
+description: SIC Live project rules. Always applied.
+globs:
+alwaysApply: true
+---
+
+- Follow AGENTS.md at the repo root. A prompt may tell you how many chunks to run (OVERNIGHT_PROMPT.md runs them all); AGENTS.md says how to pick and finish each one.
+- One chunk at a time: the one the prompt names, else the lowest-numbered chunk that is not ticked in docs/PROGRESS.md, not listed in docs/BLOCKERS.md, and whose Depends-on chunks are all ticked.
+- The database contract in docs/DB_CONTRACT.md is fixed. New SQL goes in a new file in db/migrations, with a note in docs/DECISIONS.md.
+- Overnight, run everything in SIC_DATA_MODE=fake and SIC_AUTH_MODE=dev against fixtures/. Never call Azure, the live database, Graph or Teams.
+- Every endpoint and screen takes a site. Prove site isolation with the DEMO site in a test.
+- Playwright specs reset the fake with POST /api/__test/reset in beforeEach and run with workers: 1.
+- RAG always shows its shape as well as its colour.
+- Finish a chunk only when `pnpm check` passes. If blocked after three attempts, write docs/BLOCKERS.md and stop that chunk.

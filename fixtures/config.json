@@ -1,0 +1,916 @@
+{
+ "notes": "notifyRoles is a string array here; the database stores a comma list and the SQL repository splits it. deviceKeys carry a plain test key only so the fake can hash it; the database stores only the SHA-256 hash.",
+ "sites": [
+  {
+   "siteKey": "HFI",
+   "siteName": "Hilton Foods Ireland, Drogheda",
+   "country": "IE",
+   "timeZoneId": "GMT Standard Time",
+   "ragGreenPct": 95,
+   "ragAmberPct": 85,
+   "ragMinAvailMins": 10,
+   "commentDueMins": 30,
+   "dayStartHour": 0,
+   "notificationsLive": false,
+   "liveFromUtc": null,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "siteName": "Hilton Foods UK, Huntingdon",
+   "country": "GB",
+   "timeZoneId": "GMT Standard Time",
+   "ragGreenPct": 95,
+   "ragAmberPct": 85,
+   "ragMinAvailMins": 10,
+   "commentDueMins": 30,
+   "dayStartHour": 0,
+   "notificationsLive": false,
+   "liveFromUtc": null,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "siteName": "Demo site (tests only)",
+   "country": "GB",
+   "timeZoneId": "GMT Standard Time",
+   "ragGreenPct": 95,
+   "ragAmberPct": 85,
+   "ragMinAvailMins": 10,
+   "commentDueMins": 30,
+   "dayStartHour": 0,
+   "notificationsLive": false,
+   "liveFromUtc": null,
+   "isActive": true
+  }
+ ],
+ "areas": [
+  {
+   "siteKey": "HFI",
+   "areaKey": "fresh",
+   "areaName": "Fresh",
+   "displayOrder": 1
+  },
+  {
+   "siteKey": "HFI",
+   "areaKey": "cured",
+   "areaName": "Cured",
+   "displayOrder": 2
+  },
+  {
+   "siteKey": "HFI",
+   "areaKey": "other",
+   "areaName": "Other",
+   "displayOrder": 3
+  },
+  {
+   "siteKey": "DEMO",
+   "areaKey": "packing",
+   "areaName": "Packing",
+   "displayOrder": 1
+  }
+ ],
+ "lines": [
+  {
+   "siteKey": "HFI",
+   "lineNo": 1,
+   "lineName": "Line 1",
+   "areaKey": "fresh",
+   "cellName": "Formed",
+   "displayOrder": 1,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 2,
+   "lineName": "Line 2",
+   "areaKey": "fresh",
+   "cellName": "Formed",
+   "displayOrder": 2,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 3,
+   "lineName": "Line 3",
+   "areaKey": "fresh",
+   "cellName": "Formed",
+   "displayOrder": 3,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 4,
+   "lineName": "Line 4",
+   "areaKey": "fresh",
+   "cellName": "Sliced",
+   "displayOrder": 4,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 5,
+   "lineName": "Line 5",
+   "areaKey": "fresh",
+   "cellName": "Sliced",
+   "displayOrder": 5,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 6,
+   "lineName": "Line 6",
+   "areaKey": "fresh",
+   "cellName": "Sliced",
+   "displayOrder": 6,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 7,
+   "lineName": "Line 7",
+   "areaKey": "fresh",
+   "cellName": "Sliced",
+   "displayOrder": 7,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 9,
+   "lineName": "Line 9",
+   "areaKey": "fresh",
+   "cellName": "Sausage",
+   "displayOrder": 9,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 10,
+   "lineName": "Line 10",
+   "areaKey": "fresh",
+   "cellName": "Sausage",
+   "displayOrder": 10,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 11,
+   "lineName": "Line 11",
+   "areaKey": "cured",
+   "cellName": "Rasher",
+   "displayOrder": 11,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 12,
+   "lineName": "Line 12",
+   "areaKey": "cured",
+   "cellName": "Joints",
+   "displayOrder": 12,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 13,
+   "lineName": "Line 13",
+   "areaKey": "cured",
+   "cellName": "Rasher",
+   "displayOrder": 13,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 14,
+   "lineName": "Line 14",
+   "areaKey": "cured",
+   "cellName": "Joints",
+   "displayOrder": 14,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 15,
+   "lineName": "Line 15",
+   "areaKey": "other",
+   "cellName": "Christmas line",
+   "displayOrder": 15,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 16,
+   "lineName": "Line 16",
+   "areaKey": "cured",
+   "cellName": "Rasher",
+   "displayOrder": 16,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 17,
+   "lineName": "Line 17",
+   "areaKey": "cured",
+   "cellName": "Joints",
+   "displayOrder": 17,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "lineNo": 23,
+   "lineName": "Line 23",
+   "areaKey": "other",
+   "cellName": "Not in area lookup",
+   "displayOrder": 23,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "lineNo": 1,
+   "lineName": "Line 1",
+   "areaKey": "packing",
+   "cellName": "Demo cell",
+   "displayOrder": 1,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "lineNo": 2,
+   "lineName": "Line 2",
+   "areaKey": "packing",
+   "cellName": "Demo cell",
+   "displayOrder": 2,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "lineNo": 3,
+   "lineName": "Line 3",
+   "areaKey": "packing",
+   "cellName": "Demo cell",
+   "displayOrder": 3,
+   "isActive": true
+  }
+ ],
+ "reasonCodes": [
+  {
+   "siteKey": "HFI",
+   "reasonCode": "BREAKDOWN",
+   "reasonName": "Breakdown",
+   "lossCategory": "Availability",
+   "displayOrder": 1,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "CHANGEOVER",
+   "reasonName": "Changeover overrun",
+   "lossCategory": "Availability",
+   "displayOrder": 2,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "MATERIAL",
+   "reasonName": "Meat or material supply",
+   "lossCategory": "Availability",
+   "displayOrder": 3,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "PACKAGING",
+   "reasonName": "Packaging or film",
+   "lossCategory": "Availability",
+   "displayOrder": 4,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "LABOUR",
+   "reasonName": "Labour shortage",
+   "lossCategory": "People",
+   "displayOrder": 5,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "SPEED",
+   "reasonName": "Running below speed",
+   "lossCategory": "Performance",
+   "displayOrder": 6,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "MINORSTOPS",
+   "reasonName": "Minor stops",
+   "lossCategory": "Performance",
+   "displayOrder": 7,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "QUALITY",
+   "reasonName": "Quality hold or rework",
+   "lossCategory": "Quality",
+   "displayOrder": 8,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "GIVEAWAY",
+   "reasonName": "Giveaway or weight",
+   "lossCategory": "Quality",
+   "displayOrder": 9,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "PLAN",
+   "reasonName": "Plan or schedule change",
+   "lossCategory": "Planning",
+   "displayOrder": 10,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "HYGIENE",
+   "reasonName": "Hygiene or cleaning",
+   "lossCategory": "Planning",
+   "displayOrder": 11,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFI",
+   "reasonCode": "OTHER",
+   "reasonName": "Other",
+   "lossCategory": "Other",
+   "displayOrder": 12,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "BREAKDOWN",
+   "reasonName": "Breakdown",
+   "lossCategory": "Availability",
+   "displayOrder": 1,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "CHANGEOVER",
+   "reasonName": "Changeover overrun",
+   "lossCategory": "Availability",
+   "displayOrder": 2,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "MATERIAL",
+   "reasonName": "Meat or material supply",
+   "lossCategory": "Availability",
+   "displayOrder": 3,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "PACKAGING",
+   "reasonName": "Packaging or film",
+   "lossCategory": "Availability",
+   "displayOrder": 4,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "LABOUR",
+   "reasonName": "Labour shortage",
+   "lossCategory": "People",
+   "displayOrder": 5,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "SPEED",
+   "reasonName": "Running below speed",
+   "lossCategory": "Performance",
+   "displayOrder": 6,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "MINORSTOPS",
+   "reasonName": "Minor stops",
+   "lossCategory": "Performance",
+   "displayOrder": 7,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "QUALITY",
+   "reasonName": "Quality hold or rework",
+   "lossCategory": "Quality",
+   "displayOrder": 8,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "GIVEAWAY",
+   "reasonName": "Giveaway or weight",
+   "lossCategory": "Quality",
+   "displayOrder": 9,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "PLAN",
+   "reasonName": "Plan or schedule change",
+   "lossCategory": "Planning",
+   "displayOrder": 10,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "HYGIENE",
+   "reasonName": "Hygiene or cleaning",
+   "lossCategory": "Planning",
+   "displayOrder": 11,
+   "isActive": true
+  },
+  {
+   "siteKey": "HFUK",
+   "reasonCode": "OTHER",
+   "reasonName": "Other",
+   "lossCategory": "Other",
+   "displayOrder": 12,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "BREAKDOWN",
+   "reasonName": "Breakdown",
+   "lossCategory": "Availability",
+   "displayOrder": 1,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "CHANGEOVER",
+   "reasonName": "Changeover overrun",
+   "lossCategory": "Availability",
+   "displayOrder": 2,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "MATERIAL",
+   "reasonName": "Meat or material supply",
+   "lossCategory": "Availability",
+   "displayOrder": 3,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "PACKAGING",
+   "reasonName": "Packaging or film",
+   "lossCategory": "Availability",
+   "displayOrder": 4,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "LABOUR",
+   "reasonName": "Labour shortage",
+   "lossCategory": "People",
+   "displayOrder": 5,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "SPEED",
+   "reasonName": "Running below speed",
+   "lossCategory": "Performance",
+   "displayOrder": 6,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "MINORSTOPS",
+   "reasonName": "Minor stops",
+   "lossCategory": "Performance",
+   "displayOrder": 7,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "QUALITY",
+   "reasonName": "Quality hold or rework",
+   "lossCategory": "Quality",
+   "displayOrder": 8,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "GIVEAWAY",
+   "reasonName": "Giveaway or weight",
+   "lossCategory": "Quality",
+   "displayOrder": 9,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "PLAN",
+   "reasonName": "Plan or schedule change",
+   "lossCategory": "Planning",
+   "displayOrder": 10,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "HYGIENE",
+   "reasonName": "Hygiene or cleaning",
+   "lossCategory": "Planning",
+   "displayOrder": 11,
+   "isActive": true
+  },
+  {
+   "siteKey": "DEMO",
+   "reasonCode": "OTHER",
+   "reasonName": "Other",
+   "lossCategory": "Other",
+   "displayOrder": 12,
+   "isActive": true
+  }
+ ],
+ "escalationRules": [
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 30,
+   "notifyRoles": [
+    "LineLeader",
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": 30,
+   "ruleId": 1,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Red hour with no comment 30 minutes after it ended"
+  },
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 2,
+   "threshold": null,
+   "delayMins": 60,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 2,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Still no comment 60 minutes after a red hour: in-app to the area and site manager"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 1,
+   "threshold": 2,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": 60,
+   "ruleId": 3,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Two red hours in a row on a line"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 2,
+   "threshold": 3,
+   "delayMins": 0,
+   "notifyRoles": [
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 4,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Three red hours in a row, or level 1 left unacknowledged for an hour"
+  },
+  {
+   "ruleType": "ShiftBelowTarget",
+   "lvl": 1,
+   "threshold": 85,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 5,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Line below 85% of target for the day after 3 complete hours"
+  },
+  {
+   "ruleType": "ActionOverdue",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 6,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Corrective action past its due date: the owner and area manager"
+  },
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 30,
+   "notifyRoles": [
+    "LineLeader",
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": 30,
+   "ruleId": 7,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Red hour with no comment 30 minutes after it ended"
+  },
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 2,
+   "threshold": null,
+   "delayMins": 60,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 8,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Still no comment 60 minutes after a red hour: in-app to the area and site manager"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 1,
+   "threshold": 2,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": 60,
+   "ruleId": 9,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Two red hours in a row on a line"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 2,
+   "threshold": 3,
+   "delayMins": 0,
+   "notifyRoles": [
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 10,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Three red hours in a row, or level 1 left unacknowledged for an hour"
+  },
+  {
+   "ruleType": "ShiftBelowTarget",
+   "lvl": 1,
+   "threshold": 85,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 11,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Line below 85% of target for the day after 3 complete hours"
+  },
+  {
+   "ruleType": "ActionOverdue",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 12,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Corrective action past its due date: the owner and area manager"
+  },
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 30,
+   "notifyRoles": [
+    "LineLeader",
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": 30,
+   "ruleId": 13,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Red hour with no comment 30 minutes after it ended"
+  },
+  {
+   "ruleType": "RedNoComment",
+   "lvl": 2,
+   "threshold": null,
+   "delayMins": 60,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": false,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 14,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Still no comment 60 minutes after a red hour: in-app to the area and site manager"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 1,
+   "threshold": 2,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": 60,
+   "ruleId": 15,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Two red hours in a row on a line"
+  },
+  {
+   "ruleType": "ConsecutiveRed",
+   "lvl": 2,
+   "threshold": 3,
+   "delayMins": 0,
+   "notifyRoles": [
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 16,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Three red hours in a row, or level 1 left unacknowledged for an hour"
+  },
+  {
+   "ruleType": "ShiftBelowTarget",
+   "lvl": 1,
+   "threshold": 85,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager",
+    "SiteManager"
+   ],
+   "toTeams": true,
+   "toEmail": false,
+   "escalateAfterMins": null,
+   "ruleId": 17,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Line below 85% of target for the day after 3 complete hours"
+  },
+  {
+   "ruleType": "ActionOverdue",
+   "lvl": 1,
+   "threshold": null,
+   "delayMins": 0,
+   "notifyRoles": [
+    "AreaManager"
+   ],
+   "toTeams": false,
+   "toEmail": true,
+   "escalateAfterMins": null,
+   "ruleId": 18,
+   "siteKey": "DEMO",
+   "areaKey": "",
+   "isActive": true,
+   "description": "Corrective action past its due date: the owner and area manager"
+  }
+ ],
+ "notificationTargets": [
+  {
+   "targetId": 1,
+   "siteKey": "HFI",
+   "areaKey": "",
+   "channel": "Teams",
+   "address": "teams-sic-hfi",
+   "minLvl": 2,
+   "isActive": false,
+   "description": "Hilton Foods Ireland, Drogheda SIC channel, level 2 and above"
+  },
+  {
+   "targetId": 2,
+   "siteKey": "HFUK",
+   "areaKey": "",
+   "channel": "Teams",
+   "address": "teams-sic-hfuk",
+   "minLvl": 2,
+   "isActive": false,
+   "description": "Hilton Foods UK, Huntingdon SIC channel, level 2 and above"
+  }
+ ],
+ "deviceKeys": [
+  {
+   "deviceKeyId": 1,
+   "siteKey": "HFI",
+   "areaKey": "fresh",
+   "lineNo": null,
+   "deviceName": "Fresh area TV (test)",
+   "plainKeyForTestsOnly": "test-hfi-fresh-tv-key-0001",
+   "expiresUtc": null,
+   "revokedUtc": null
+  },
+  {
+   "deviceKeyId": 2,
+   "siteKey": "HFI",
+   "areaKey": null,
+   "lineNo": 7,
+   "deviceName": "Line 7 TV (test)",
+   "plainKeyForTestsOnly": "test-hfi-line7-tv-key-0002",
+   "expiresUtc": null,
+   "revokedUtc": null
+  },
+  {
+   "deviceKeyId": 3,
+   "siteKey": "HFI",
+   "areaKey": null,
+   "lineNo": null,
+   "deviceName": "Revoked TV (test)",
+   "plainKeyForTestsOnly": "test-hfi-revoked-key-0003",
+   "expiresUtc": null,
+   "revokedUtc": "2026-11-01T00:00:00Z"
+  }
+ ]
+}
