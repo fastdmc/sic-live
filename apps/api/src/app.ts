@@ -12,6 +12,8 @@ import {
   type HttpRequest,
   type HttpResponse,
 } from './http.js';
+import { registerReadRoutes } from './routes/reads.js';
+import { registerWriteRoutes } from './routes/writes.js';
 import { SqlRepository } from './sql/SqlRepository.js';
 
 export type App = {
@@ -71,6 +73,9 @@ export function createApp(options?: {
       body: { status: 'ok', dataMode: config.dataMode, version: sharedVersion },
     }),
   );
+
+  registerReadRoutes(router, config, repo, entra);
+  registerWriteRoutes(router, config, repo, entra, config.appBaseUrl);
 
   // TV health (device auth)
   router.route('GET', '/api/tv/:key/health', async (req, params) => {

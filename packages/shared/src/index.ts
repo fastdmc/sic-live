@@ -5,6 +5,7 @@ export * from './rag.js';
 export * from './time.js';
 export * from './schemas.js';
 export * from './repository.js';
+export * from './summary.js';
 export { FixtureClock } from './fake/FixtureClock.js';
 export { FakeRepository } from './fake/FakeRepository.js';
 export { roleRankForArea, hasAnySiteRole } from './fake/roles.js';
